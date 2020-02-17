@@ -1,5 +1,5 @@
 //
-// Created by danf2 on 08.11.2019.
+// Created by dan on 07.02.2020.
 //
 
 #ifndef LAB_05_STACK_STACKNONCOPY_H

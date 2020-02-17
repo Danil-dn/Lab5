@@ -1,5 +1,5 @@
 //
-// Created by danf2 on 08.11.2019.
+// Created by dan on 08.02.2020.
 //
 
 #ifndef LAB_05_STACK_STACK_H
@@ -36,8 +36,4 @@ public:
     }
 };
 
-
-
-
-
-#endif //LAB_05_STACK_STACK_H
+#endif //LAB_05_STACK_H

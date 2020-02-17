@@ -1,4 +1,4 @@
-// Copyright 2018 Your Name <your_email>
+// Copyright 2020 Your Name <your_email>
 
 #ifndef INCLUDE_HEADER_HPP_
 #define INCLUDE_HEADER_HPP_
@@ -43,6 +43,17 @@ public:
     ParentStack &operator=(const ParentStack &stack) = delete;
     // убираем копирование для rvalue
     ParentStack &operator=(ParentStack &&stack) noexcept = default;
+~ParentStack()
+    {
+        while (headstack) {
+            auto *prevNode = headstack;
+            headNode = prevNode->prev;
+
+            delete prevNode;
+        }
+    }
+
+
 
 protected:
     StackValue<T> *headStack= nullptr;
