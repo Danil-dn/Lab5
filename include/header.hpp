@@ -39,10 +39,7 @@ public:
         }
 
     }
-    // убираем копирование для lvalue
-    ParentStack &operator=(const ParentStack &stack) = delete;
-    // убираем копирование для rvalue
-    ParentStack &operator=(ParentStack &&stack) noexcept = default;
+    
 ~ParentStack()
     {
         while (headstack) {
@@ -52,6 +49,10 @@ public:
             delete prevNode;
         }
     }
+// убираем копирование для lvalue
+    ParentStack &operator=(const ParentStack &stack) = delete;
+    // убираем копирование для rvalue
+    ParentStack &operator=(ParentStack &&stack) noexcept = default;
 
 
 
